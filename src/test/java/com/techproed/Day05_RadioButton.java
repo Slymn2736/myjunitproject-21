@@ -2,6 +2,7 @@ package com.techproed;
 
 import com.github.javafaker.Faker;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -57,5 +58,9 @@ public class Day05_RadioButton {
         Thread.sleep(5000);
         driver.findElement(By.name("websubmit")).click();
         Thread.sleep(5000);
+    }
+    @After
+    public void tearDown(){
+        driver.quit();
     }
 }
